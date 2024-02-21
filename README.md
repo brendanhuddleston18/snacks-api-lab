@@ -1,6 +1,6 @@
-# LAB - Class 31
+# LAB - Class 31/32
 
-## Project: Django Rest Framework and Docker Container
+## Project: Django Rest Framework, Docker Container, Postgresql
 
 ### Author: Brendan Huddleston
 
@@ -8,19 +8,19 @@
 
 ### Setup
 
-- Create a virtual environment
-
-- Install Dependencies from Requirements
+- Install Container
 
 ### How to Initialize/Run Your Application
-
-- `python manage.py runserver` To Run
 
 - Navigate to `url/api/v1/snacks/` to navigate to API
 
 ### How to Use Your Library
 
 - Run Server
+
+- `docker compose build` To build the container
+
+- `docker compose up` To run the container
 
 - Navigate to `localhost/api/v1/snacks/` to navigate to API
 

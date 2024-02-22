@@ -1,4 +1,4 @@
-# LAB - Class 31/32
+# LAB - Class 31/32/33
 
 ## Project: Django Rest Framework, Docker Container, Postgresql
 

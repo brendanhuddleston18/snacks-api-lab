@@ -1,18 +1,19 @@
 services:
       web:
           build: .
-          ports: 
-              - "8000:8000"
-          command: python manage.py runserver 0.0.0.0:8000
+        #   command: python manage.py runserver 0.0.0.0:8000
+          command: gunicorn snacks_api_project.wsgi:application --bind 0.0.0.0:8000 --workers 4
           volumes:
               - .:/code
-      db:
-          image: postgres:14
-          volumes: 
-              - postgres_data:/var/lib/postgresql/data/
-          environment:
-              - "POSTGRES_HOST_AUTH_METHOD=trust"
+          ports: 
+              - "8000:8000"
+#       db:
+#           image: postgres:14
+#           volumes: 
+#               - postgres_data:/var/lib/postgresql/data/
+#           environment:
+#               - "POSTGRES_HOST_AUTH_METHOD=trust"
               
-volumes:
-  postgres_data:
+# volumes:
+#   postgres_data:
         
